@@ -249,7 +249,7 @@ int main(int argc, char *argv[]) {
     if (parseTimeArg(argv[1]) != 0) 
         return 1;
     
-    printf("What's happened is happened! The system is preparing to travel backwards...");
+    printf("[MORPHEUS]: What's happened is happened! Preparing the system to travel backwards...");
 
     printf("Travelling back %ld seconds.\n", target_seconds_ago);
 
@@ -270,7 +270,7 @@ int main(int argc, char *argv[]) {
     }
     snprintf(best_snapshot_rw, sizeof(best_snapshot_rw), "%.*s-rw",(int)(sizeof(best_snapshot_rw) - 4), best_snapshot_ro);
 
-    printf("2. Creating the writable copy %s\n", best_snapshot_rw);
+    printf("2. Making the past writable. %s\n", best_snapshot_rw);
 
 
     snprintf(cmd_buffer, sizeof(cmd_buffer), "btrfs subvolume snapshot %s/%.17s %s/%.21s", 
@@ -283,9 +283,10 @@ int main(int argc, char *argv[]) {
     }
 
     printf("\n3. Select Time Traversal Mode:\n");
-    printf("   (P)ermanent Rollback: This past state becomes the new future. You cannot come back to the present!\n");
     printf("   (O)ne-Time Visit: Visit the past, changes are discarded on next shutdown. You come back to the present after reboot.\n");
+    printf("   (P)ermanent Temporal override: This past state becomes the new future. You cannot come back to the present!\n");
     printf("   Mode (p/o)?: ");
+
 
     if (!fgets(rollback_mode, sizeof(rollback_mode), stdin)) {
         fprintf(stderr, "No input for traversal mode. Aborting.\n");
