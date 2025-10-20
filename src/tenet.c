@@ -12,10 +12,10 @@
 #include <errno.h>
 #include <sys/reboot.h>
 
-#define SNAPSHOT_DIR "/mnt/.snapshots"
-#define SNAPSHOT_PATH_PREFIX "/mnt/.snapshots"
-#define FLAG_FILE_PATH "/mnt/.snapshots/tenet_target.txt"
-#define TEMP_FLAG_FILE_PATH "/mnt/.snapshots/tenet_target.txt.tmp"
+#define SNAPSHOT_DIR "/mnt/tenet/.snapshots"
+#define SNAPSHOT_PATH_PREFIX "/mnt/tenet/.snapshots"
+#define FLAG_FILE_PATH "/mnt/tenet/.snapshots/tenet_target.txt"
+#define TEMP_FLAG_FILE_PATH "/mnt/tenet/.snapshots/tenet_target.txt.tmp"
 #define MAX_SNAPNAME 128
 #define MAX_CMD_LEN 512
 
