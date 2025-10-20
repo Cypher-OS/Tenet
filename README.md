@@ -1,5 +1,5 @@
 # Tenet
-A filesystem utility travel backwards in time, handled by Cypher's God - MORPHEUS
+A filesystem utility to travel backwards in time, handled by Cypher's God - MORPHEUS
 
 ## Features
 - **Travelling backwards in time** 
